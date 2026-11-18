@@ -1,0 +1,63 @@
+{
+  "profile_id": "new-visual-style-id",
+  "display_name": "待命名风格",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "draft",
+  "scope": "style",
+  "description": "描述此风格的审美目标、适用范围与不适用范围（不局限于预置类别）",
+  "intent": {
+    "positive_goals": [
+      "待依据真实参考补充"
+    ],
+    "avoid": [
+      "待依据用户要求补充"
+    ]
+  },
+  "medium": {
+    "category": "unknown-or-hybrid",
+    "production_methods": []
+  },
+  "visual_rules": {
+    "composition": [],
+    "geometry": [],
+    "palette": [],
+    "lighting": [],
+    "surface": [],
+    "edges": [],
+    "detail_density": []
+  },
+  "intentional_effects": [],
+  "defect_rules": [],
+  "inspection": {
+    "whole_image": [],
+    "regions": [],
+    "magnifications": [
+      "fit",
+      "100%"
+    ],
+    "comparison": []
+  },
+  "acceptance": {
+    "hard_gates": [],
+    "soft_gates": [],
+    "minimum_total_score": 80,
+    "non_applicable_q": []
+  },
+  "compatibility": {
+    "compatible_profiles": [],
+    "conflicts": [],
+    "conflict_resolution": "待定"
+  },
+  "references": [],
+  "change_history": [
+    {
+      "version": "0.1.0",
+      "date": "待填写",
+      "change": "初次临时建档"
+    }
+  ],
+  "extensions": {
+    "unresolved_questions": []
+  }
+}

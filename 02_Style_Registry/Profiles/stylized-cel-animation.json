@@ -1,0 +1,122 @@
+{
+  "profile_id": "stylized-cel-animation",
+  "display_name": "赛璐璐/二维平涂动画（示例）",
+  "description": "以线条轮廓、造型识别与可控色块为核心；不强制真实材质微纹理。",
+  "intent": {
+    "positive_goals": [
+      "轮廓和颜色块统一",
+      "角色身份稳定",
+      "阴影干净"
+    ],
+    "avoid": [
+      "非意图渐变污染",
+      "不一致的勾线"
+    ]
+  },
+  "medium": {
+    "category": "2d-animation",
+    "production_methods": [
+      "手绘",
+      "数字平涂",
+      "AI风格化"
+    ]
+  },
+  "visual_rules": {
+    "composition": [
+      "清晰的视觉焦点"
+    ],
+    "geometry": [
+      "解剖允许风格化夸张但必须符合角色设计"
+    ],
+    "palette": [
+      "限定主色与影色关系"
+    ],
+    "lighting": [
+      "分层影色可取代物理反射"
+    ],
+    "surface": [
+      "平整色块是正常风格表现"
+    ],
+    "edges": [
+      "保留设计的线条宽度与弧度"
+    ],
+    "detail_density": [
+      "重点在五官轮廓和服饰识别，而非微孔毛发"
+    ]
+  },
+  "intentional_effects": [
+    "平涂",
+    "角色比例夸张",
+    "简化阴影",
+    "少纹理"
+  ],
+  "defect_rules": [
+    {
+      "id": "cel-line-merge",
+      "symptom": "无意线条粘连、断裂或色块漏填",
+      "severity": "P1",
+      "inspection": "100%检查眼睛、发束、手部及衣边",
+      "repair": "局部修复线稿与填色"
+    }
+  ],
+  "inspection": {
+    "whole_image": [
+      "色块与角色比例"
+    ],
+    "regions": [
+      "五官",
+      "手部",
+      "发束",
+      "描线边界"
+    ],
+    "magnifications": [
+      "fit",
+      "100%"
+    ],
+    "comparison": [
+      "同角色其他帧一致性"
+    ]
+  },
+  "acceptance": {
+    "hard_gates": [
+      "身份锚点保持",
+      "关键线稿结构正确"
+    ],
+    "soft_gates": [
+      "阴影与色板统一"
+    ],
+    "minimum_total_score": 80,
+    "non_applicable_q": []
+  },
+  "compatibility": {
+    "compatible_profiles": [
+      "cinematic-photography"
+    ],
+    "conflicts": [
+      "同区域不应强制真实皮肤微纹理"
+    ],
+    "conflict_resolution": "仅当用户要求时对局部使用摄影式光影"
+  },
+  "aliases": [],
+  "status": "approved",
+  "version": "1.0.0",
+  "scope": "style",
+  "references": [
+    {
+      "label": "规范示例（非用户审美指令）",
+      "source_type": "internal_demo",
+      "source": "No copyrighted style samples are bundled",
+      "permission": "descriptive only"
+    }
+  ],
+  "change_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-11-17",
+      "change": "首批审核示例配置，不代表风格枚举全集"
+    }
+  ],
+  "extensions": {
+    "not_global_default": true
+  }
+}

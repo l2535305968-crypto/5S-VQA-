@@ -1,0 +1,122 @@
+{
+  "profile_id": "cinematic-photography",
+  "display_name": "电影摄影表达（示例）",
+  "description": "强调镜头语言与摄影光学自洽，允许摄影性噪点和景深；并非所有摄影都应该如此。",
+  "intent": {
+    "positive_goals": [
+      "镜头焦点清楚",
+      "光线与场景叙事一致",
+      "材质与曝光可信"
+    ],
+    "avoid": [
+      "无意过曝",
+      "无意焦点漂移"
+    ]
+  },
+  "medium": {
+    "category": "photographic",
+    "production_methods": [
+      "摄影",
+      "摄影式AI生成",
+      "数字合成"
+    ]
+  },
+  "visual_rules": {
+    "composition": [
+      "以拍摄意图决定焦点、景别"
+    ],
+    "geometry": [
+      "建筑如强调正立面则需线条一致；艺术性镜头畸变可允许"
+    ],
+    "palette": [
+      "色温支持故事氛围"
+    ],
+    "lighting": [
+      "主体与反射关系自洽"
+    ],
+    "surface": [
+      "肤质和材质保持与拍摄距离相称的真实细节"
+    ],
+    "edges": [
+      "景深焦外不强制锐利"
+    ],
+    "detail_density": [
+      "焦点处信息足够，其余区域按景深递减"
+    ]
+  },
+  "intentional_effects": [
+    "胶片颗粒",
+    "运动模糊",
+    "柔焦",
+    "光晕（如摄影意图明确）"
+  ],
+  "defect_rules": [
+    {
+      "id": "cin-ghost",
+      "symptom": "无意鬼影或物体边缘重复",
+      "severity": "P1",
+      "inspection": "100%检查运动边缘",
+      "repair": "局部重绘或更换候选"
+    }
+  ],
+  "inspection": {
+    "whole_image": [
+      "构图及叙事焦点"
+    ],
+    "regions": [
+      "主体焦点",
+      "反射",
+      "暗部",
+      "过渡区"
+    ],
+    "magnifications": [
+      "fit",
+      "100%"
+    ],
+    "comparison": [
+      "有参考图则同构图对比"
+    ]
+  },
+  "acceptance": {
+    "hard_gates": [
+      "主体与用户要求匹配",
+      "无非意图关键结构缺陷"
+    ],
+    "soft_gates": [
+      "光影叙事及镜头语言一致"
+    ],
+    "minimum_total_score": 80,
+    "non_applicable_q": []
+  },
+  "compatibility": {
+    "compatible_profiles": [
+      "stylized-cel-animation"
+    ],
+    "conflicts": [
+      "同一区域又要求清晰又要求完全失焦时必须按项目意图划分"
+    ],
+    "conflict_resolution": "以对象/区域分开匹配的规则"
+  },
+  "aliases": [],
+  "status": "approved",
+  "version": "1.0.0",
+  "scope": "style",
+  "references": [
+    {
+      "label": "规范示例（非用户审美指令）",
+      "source_type": "internal_demo",
+      "source": "No copyrighted style samples are bundled",
+      "permission": "descriptive only"
+    }
+  ],
+  "change_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-11-17",
+      "change": "首批审核示例配置，不代表风格枚举全集"
+    }
+  ],
+  "extensions": {
+    "not_global_default": true
+  }
+}

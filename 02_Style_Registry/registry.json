@@ -1,0 +1,24 @@
+{
+  "registry_version": "2.0.0",
+  "description": "仅已批准的Profile正式入库；新增类别无需预先登记在固定列表",
+  "entries": [
+    {
+      "profile_id": "cinematic-photography",
+      "path": "Profiles/cinematic-photography.json",
+      "version": "1.0.0",
+      "status": "approved"
+    },
+    {
+      "profile_id": "stylized-cel-animation",
+      "path": "Profiles/stylized-cel-animation.json",
+      "version": "1.0.0",
+      "status": "approved"
+    },
+    {
+      "profile_id": "ink-wash-experimental",
+      "path": "Profiles/ink-wash-experimental.json",
+      "version": "1.0.0",
+      "status": "approved"
+    }
+  ]
+}

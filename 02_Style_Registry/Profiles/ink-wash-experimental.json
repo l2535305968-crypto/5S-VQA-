@@ -1,0 +1,119 @@
+{
+  "profile_id": "ink-wash-experimental",
+  "display_name": "水墨与实验性留白（示例）",
+  "description": "笔墨、纸纹、飞白、留白和形意统一；刻意模糊并非自动失败，适合新增实验风格分支。",
+  "intent": {
+    "positive_goals": [
+      "水墨层次有节奏",
+      "空白位置具有意图",
+      "笔触保留自然变化"
+    ],
+    "avoid": [
+      "无意笔触脏点",
+      "局部风格突变"
+    ]
+  },
+  "medium": {
+    "category": "painting-hybrid",
+    "production_methods": [
+      "水墨",
+      "数字模拟水墨",
+      "混合媒介"
+    ]
+  },
+  "visual_rules": {
+    "composition": [
+      "留白是视觉结构的重要部分"
+    ],
+    "geometry": [
+      "写意变形允许，只核查内部叙事自洽"
+    ],
+    "palette": [
+      "墨色浓淡具有节奏"
+    ],
+    "lighting": [
+      "不强制物理光源"
+    ],
+    "surface": [
+      "纸纹与墨晕可以是必要细节"
+    ],
+    "edges": [
+      "飞白和晕染不强制抗锯齿式光滑"
+    ],
+    "detail_density": [
+      "以疏密节奏判断，不要求每处清晰"
+    ]
+  },
+  "intentional_effects": [
+    "飞白",
+    "渗化",
+    "不连续笔触",
+    "大量留白",
+    "抽象变形"
+  ],
+  "defect_rules": [
+    {
+      "id": "ink-digital-garbage",
+      "symptom": "与笔势无关的数码锯齿/压缩块或随机重复污点",
+      "severity": "P2",
+      "inspection": "100%看墨色过渡和边缘，结合风格意图",
+      "repair": "从干净源或局部笔触修复"
+    }
+  ],
+  "inspection": {
+    "whole_image": [
+      "虚实疏密与留白"
+    ],
+    "regions": [
+      "墨色浓淡处",
+      "飞白",
+      "纸纹"
+    ],
+    "magnifications": [
+      "fit",
+      "100%"
+    ],
+    "comparison": [
+      "有原作参考时审查笔势而非写实精度"
+    ]
+  },
+  "acceptance": {
+    "hard_gates": [
+      "忠于用户指定墨色及构图目标"
+    ],
+    "soft_gates": [
+      "笔墨自然、留白有意图"
+    ],
+    "minimum_total_score": 80,
+    "non_applicable_q": []
+  },
+  "compatibility": {
+    "compatible_profiles": [],
+    "conflicts": [
+      "摄影式全局锐化会破坏笔墨"
+    ],
+    "conflict_resolution": "按区域或维度分开检验"
+  },
+  "aliases": [],
+  "status": "approved",
+  "version": "1.0.0",
+  "scope": "style",
+  "references": [
+    {
+      "label": "规范示例（非用户审美指令）",
+      "source_type": "internal_demo",
+      "source": "No copyrighted style samples are bundled",
+      "permission": "descriptive only"
+    }
+  ],
+  "change_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-11-17",
+      "change": "首批审核示例配置，不代表风格枚举全集"
+    }
+  ],
+  "extensions": {
+    "not_global_default": true
+  }
+}

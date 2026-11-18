@@ -1,0 +1,313 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/xunyi/style-profile-v2.schema.json",
+  "title": "XUNYI Open Visual Style Profile v2",
+  "description": "Open world registry: extension keys deliberately permitted.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "profile_id",
+    "display_name",
+    "version",
+    "status",
+    "scope",
+    "description",
+    "intent",
+    "medium",
+    "visual_rules",
+    "intentional_effects",
+    "defect_rules",
+    "inspection",
+    "acceptance",
+    "compatibility",
+    "references",
+    "change_history",
+    "extensions"
+  ],
+  "properties": {
+    "profile_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{2,63}$"
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "approved",
+        "deprecated"
+      ]
+    },
+    "scope": {
+      "enum": [
+        "style",
+        "medium",
+        "project"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "minLength": 6
+    },
+    "intent": {
+      "type": "object",
+      "required": [
+        "positive_goals",
+        "avoid"
+      ],
+      "properties": {
+        "positive_goals": {
+          "$ref": "#/$defs/strings"
+        },
+        "avoid": {
+          "$ref": "#/$defs/strings"
+        }
+      },
+      "additionalProperties": true
+    },
+    "medium": {
+      "type": "object",
+      "required": [
+        "category",
+        "production_methods"
+      ],
+      "properties": {
+        "category": {
+          "type": "string"
+        },
+        "production_methods": {
+          "$ref": "#/$defs/strings"
+        }
+      },
+      "additionalProperties": true
+    },
+    "visual_rules": {
+      "type": "object",
+      "required": [
+        "composition",
+        "geometry",
+        "palette",
+        "lighting",
+        "surface",
+        "edges",
+        "detail_density"
+      ],
+      "properties": {
+        "composition": {
+          "$ref": "#/$defs/strings"
+        },
+        "geometry": {
+          "$ref": "#/$defs/strings"
+        },
+        "palette": {
+          "$ref": "#/$defs/strings"
+        },
+        "lighting": {
+          "$ref": "#/$defs/strings"
+        },
+        "surface": {
+          "$ref": "#/$defs/strings"
+        },
+        "edges": {
+          "$ref": "#/$defs/strings"
+        },
+        "detail_density": {
+          "$ref": "#/$defs/strings"
+        }
+      },
+      "additionalProperties": true
+    },
+    "intentional_effects": {
+      "$ref": "#/$defs/strings"
+    },
+    "defect_rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "symptom",
+          "severity",
+          "inspection"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "symptom": {
+            "type": "string"
+          },
+          "severity": {
+            "enum": [
+              "P0",
+              "P1",
+              "P2",
+              "P3"
+            ]
+          },
+          "inspection": {
+            "type": "string"
+          },
+          "repair": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "inspection": {
+      "type": "object",
+      "required": [
+        "whole_image",
+        "regions",
+        "magnifications",
+        "comparison"
+      ],
+      "properties": {
+        "whole_image": {
+          "$ref": "#/$defs/strings"
+        },
+        "regions": {
+          "$ref": "#/$defs/strings"
+        },
+        "magnifications": {
+          "$ref": "#/$defs/strings"
+        },
+        "comparison": {
+          "$ref": "#/$defs/strings"
+        }
+      },
+      "additionalProperties": true
+    },
+    "acceptance": {
+      "type": "object",
+      "required": [
+        "hard_gates",
+        "soft_gates",
+        "minimum_total_score",
+        "non_applicable_q"
+      ],
+      "properties": {
+        "hard_gates": {
+          "$ref": "#/$defs/strings"
+        },
+        "soft_gates": {
+          "$ref": "#/$defs/strings"
+        },
+        "minimum_total_score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "non_applicable_q": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "Q1",
+              "Q2",
+              "Q3",
+              "Q4",
+              "Q5",
+              "Q6",
+              "Q7"
+            ]
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "compatibility": {
+      "type": "object",
+      "required": [
+        "compatible_profiles",
+        "conflicts",
+        "conflict_resolution"
+      ],
+      "properties": {
+        "compatible_profiles": {
+          "$ref": "#/$defs/strings"
+        },
+        "conflicts": {
+          "$ref": "#/$defs/strings"
+        },
+        "conflict_resolution": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "source_type"
+        ],
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "source_type": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "permission": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "change_history": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "version",
+          "date",
+          "change"
+        ],
+        "properties": {
+          "version": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "change": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "strings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
