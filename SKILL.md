@@ -24,7 +24,7 @@ author: 寻祎居
 ## 0. 读取顺序与职责
 
 - 开始视觉创作时，读取 `01_Standards/5S_视觉创作规范_V1.0.txt`。原文不改。
-- 准备审核、选择修复或交付时，读取 `01_Standards/VQA_专业图像质量审核规范_V2.0.md`。
+- 准备审核、选择修复或交付时，读取 `01_Standards/VQA_专业图像质量审核规范_V2.0.md` 与 `01_Standards/VQA_实操补充规则_v2.1.md`（优先按三档模式、离散评级与真 E2 门禁执行）。
 - 涉及新风格、混合风格、风格标准修改时，读取 `02_Style_Registry/风格库维护规范.md` 和 `02_Style_Registry/风格配置模板.md`；先检索 `02_Style_Registry/Profiles/` 与 `Project_Overrides/`。
 - 涉及协同反馈时，读取 `01_Standards/5S_VQA_协同调用规范.md`。
 - 需要技术验收时，读取 `04_Scripts/脚本使用说明.md`，根据现有可用环境运行 `04_Scripts/image_qc.py`。
